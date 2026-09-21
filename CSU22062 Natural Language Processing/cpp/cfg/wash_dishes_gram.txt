@@ -1,0 +1,8 @@
+n --> [wash]
+v --> [wash]
+v --> [dishes]
+n --> [dishes]
+tovp --> [to],vp
+vp --> v,np
+np --> n
+initial(tovp)

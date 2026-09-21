@@ -1,0 +1,38 @@
+% Hermione is a student
+% geometry is a subject
+% Hermione likes geometry
+% a student likes geometry
+% Hermione likes every subject
+% every student who likes maths likes geometry
+
+s --> np,vp
+
+vp --> tv,np
+tv --> [likes]
+
+vp --> [is],[a],n
+
+np --> pn
+pn --> [Martin]
+pn --> [Plato]
+pn --> [Hermione]
+pn --> [Ron]
+pn --> [Harry]
+pn --> [Kermit]
+pn --> [OscarTheGrouch]
+pn --> [maths]
+pn --> [geometry]
+pn --> [history]
+pn --> [chocolate]
+
+
+np --> det,n
+det --> [a]
+det --> [every]
+det --> [no]
+n --> [student]
+n --> [subject]
+n --> [lecturer]
+n --> [unicorn]
+n --> n,[who],vp
+initial(s)

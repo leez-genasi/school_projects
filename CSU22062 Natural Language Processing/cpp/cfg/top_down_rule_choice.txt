@@ -1,0 +1,13 @@
+s --> np,vp
+s --> sadv,s
+np --> [john]
+np --> det,n
+np --> n
+vp --> iv
+iv --> [walks]
+sadv --> [maybe]
+det --> [the]
+n --> [man]
+n --> [men]
+
+initial(s)
