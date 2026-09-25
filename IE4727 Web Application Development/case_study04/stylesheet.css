@@ -1,0 +1,142 @@
+:root {
+    --primary-light: #f1efe2;
+    --primary-dark: #b69b68;
+    --nav: #e7d4b0;
+}
+
+body {
+    background-color: var(--primary-light);
+    margin: 0;
+    font-family: "Arial", Helvetica, sans-serif;
+}
+
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 800px;
+}
+
+#main-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.header {
+    font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+    text-align: center;
+    background-color: var(--primary-dark);
+}
+
+.nav {
+    background-color: var(--nav);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 20%;
+    text-align: center;
+    line-height: 150%;
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #977c48;
+}
+
+.nav a:visited {
+    color: var(--primary-dark);
+}
+
+.content {
+    display: flex;
+    align-items: stretch;
+}
+
+.main {
+    background-color: var(--primary-light);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 0px 20px 20px; /* top right bottom left */
+}
+
+.main .img {
+    float: left;
+    width: 30%;
+}
+
+.main .img img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.main .main-right {
+    padding-left: 5px;
+    float: right;
+    width: 69%;
+}
+
+ul {
+    list-style-type: url(img/ul-list.png);
+}
+
+td {
+    padding: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.form table {
+    margin-left: 0;
+    width: auto;
+}
+
+.form table td:first-child {
+    text-align: right;
+    width: 30%;
+}
+
+.music img {
+    object-fit: cover;  
+    filter: saturate(0);
+}
+
+.menu-item {
+    font-weight: bold;
+    text-align: center;
+}
+.menu-desc {
+    padding-left: 10px;
+}
+.menu tr:nth-of-type(even) {
+    background-color: var(--primary-light);
+}
+
+.menu tr:nth-of-type(odd) {
+    background-color: var(--primary-dark);
+}
+
+.music tr:nth-of-type(odd) {
+    background-color: var(--primary-dark);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.footer {
+    background-color: var(--primary-dark);
+    width: 100%;
+    float: left;
+}
+
+.footer p {
+    text-align: center;
+}

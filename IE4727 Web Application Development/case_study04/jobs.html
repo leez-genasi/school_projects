@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="stylesheet.css">
+        <script src="formValidation.js" defer></script>
+    </head>
+    <body>
+        <div id="wrapper">
+        <div class="header"; width=" 100%">
+            <h1>JavaJam Coffee House</h1>   
+        </div>
+        <div class="content">
+            <div class="nav">
+                <p>
+                    <a href="index.html">Home</a><br>
+                    <a href="menu.html">Menu</a><br>
+                    <a href="music.html">Music</a><br>
+                    <a href="jobs.html">Jobs</a>
+                </p>
+            </div>
+            <div class="main">
+                <h2>Jobs at JavaJam</h2>
+                <p>Want to work at JavaJam? Fill out the form below to start your application. Required fields are marked with an asterisk *.</p>
+                <div class="form">
+                <table><form id="form" method="post" action="show_get.php" novalidate>
+                    <tr>
+                        <td>*Name:</td>
+                        <td><input id="name" type="text" placeholder="Enter your name here" name="name" required><br></td>
+                    </tr>
+                    <tr>
+                        <td>*Email:</td>
+                        <td><input id="email" type="email" placeholder="Enter your email here" name="email" required><br></td>
+                    </tr>
+                    <tr>
+                        <td>Start Date:</td>
+                        <td><input id="startDate" type="date" name="start_date"><br></td>
+                    </tr>
+                    <tr>
+                        <td>*Experience:</td>
+                        <td><textarea id="experience" name="experience" placeholder="Enter your past experience here" required></textarea><br></td>
+                    </tr>
+                </table>
+                <input type="reset" value="Clear"><br><br>
+                <input type="submit" value="Apply Now">
+                </form></div>
+            </div>
+        </div>
+        <div class="footer">
+            <i>
+                <p>Copyright &copy; 2024 JavaJam Coffee House<br>
+                <a href="mailto:leec0160@e.ntu.edu.sg">charlette@lee.com</a></p>
+            </i>
+        </div>
+        </div>
+    </body>
+</html>
