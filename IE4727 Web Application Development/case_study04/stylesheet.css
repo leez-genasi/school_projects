@@ -110,7 +110,10 @@ table {
     filter: saturate(0);
 }
 
-.menu-item {
+.menu th {
+    padding: 8px;
+}
+.menu-name {
     font-weight: bold;
     text-align: center;
 }
