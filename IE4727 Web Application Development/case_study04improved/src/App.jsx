@@ -1,0 +1,72 @@
+import { useState } from 'react'
+import './stylesheet.css'
+
+function App() {
+  const [count, setCount] = useState(0)
+
+  return (
+    <body>
+        <div id="wrapper">
+          <div class="header" width=" 100%">
+              <h1>JavaJam Coffee House</h1>   
+          </div>
+          <div class="content">
+              <div class="nav">
+                  <p>
+                      <a href="index.html">Home</a><br />
+                      <a href="menu.html">Menu</a><br />
+                      <a href="music.html">Music</a><br />
+                      <a href="jobs.html">Jobs</a>
+                  </p>
+              </div>
+              <div class="main">
+                  <h2>Coffee at JavaJam</h2>
+                  <div class="menu">
+                  <table id="menu">
+                      <tr>
+                          <th>Menu Item</th>
+                          <th>Menu Desc</th>
+                          <th>Qty.</th>
+                          <th>Subtotal</th>
+                      </tr>
+                      <tr class="menu-item">
+                          <td class="menu-name"><h3>Just Java</h3></td>
+                          <td class="menu-desc">Regular house blend, decaffeinated coffee, or flavor of the day<br />
+                          <b>Endless Cup $2.00</b></td>
+                          <td><input type="text" id="menuQty" size="3" maxlength="3" /></td>
+                          <td class="menuPrice"></td>
+                      </tr>
+                      <tr class="menu-item">
+                          <td class="menu-name"><h3>Cafe au Lait</h3></td>
+                          <td class="menu-desc">House blended coffee infused into a smooth, steamed milk<br />
+                          <b><form><input type="radio" name="menuShot" value="single" />Single $2.00 <input type="radio" name="menuShot" value="double" />Double $3.00</form></b></td>
+                          <td><input type="text" id="menuQty" size="3" maxlength="3" /></td>
+                          <td class="menuPrice"></td>
+                      </tr>
+                      <tr class="menu-item">
+                          <td class="menu-name"><h3>Iced Cappuccino</h3></td>
+                          <td class="menu-desc">Sweetened espresso blended with icy-cold milk and served in a chilled glass<br />
+                          <b><form><input type="radio" name="menuShot" value="single" />Single $4.75 <input type="radio" name="menuShot" value="double" />Double $5.75</form></b></td>
+                          <td><input type="text" id="menuQty" size="3" maxlength="3" /></td>
+                          <td class="menuPrice"></td>
+                      </tr>
+                      <tr>
+                          <td colspan="2" align="right">Total Price:</td>
+                          <td id="totalPrice" colspan="2"></td>
+                      </tr>
+                  </table>
+                  </div>
+          </div>
+          </div>
+          <div class="footer">
+              <i>
+                  <p>Copyright &copy; 2024 JavaJam Coffee House<br />
+                  <a href="mailto:leec0160@e.ntu.edu.sg">charlette@lee.com</a></p>
+              </i>
+          </div>
+      </div>
+    </body>
+  )
+};
+
+export default App
