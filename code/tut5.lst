@@ -1,0 +1,84 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 AREA             tut5, CODE, READONLY
+    2 00000000                 ENTRY
+    3 00000000         
+    4 00000000         ; q1
+    5 00000000         ;MOV r7, #0x8C, 4
+    6 00000000         ;MOV r7, #0x42, 30
+    7 00000000         ;MVN r7, #2
+    8 00000000         ;MVN r7, #0x8C, 4
+    9 00000000         
+   10 00000000         ; q2
+   11 00000000         ;MOV r2, #0xA4, #24  ; 0xA400
+   12 00000000         ;LDR r2, =0x7D8    ; 0x7D8
+   13 00000000         ;MOV r2, #0x5D, #22  ; 0x17400
+   14 00000000         ;MOV r2, #0x66, #26  ;0x1980
+   15 00000000         
+   16 00000000         
+   17 00000000 E3A04001        MOV              r4, #1
+   18 00000004         ; q3a
+   19 00000004 E0640184        RSB              r0, r4, r4, LSL #3 
+                                                            ; r0 = r4*2^3 - r4
+   20 00000008 E0800384        ADD              r0, r0, r4, LSL #7
+   21 0000000C         
+   22 0000000C         
+   23 0000000C         ;q3b
+   24 0000000C E0640404        RSB              r0, r4, r4, LSL #8 
+                                                            ; r0 = r4*2^8-r4
+   25 00000010         
+   26 00000010         ;q3c
+   27 00000010 E1A00204        MOV              r0, r4, LSL #4 ; r0 = r4 * 2^4
+   28 00000014 E0800084        ADD              r0, r0, r4, LSL #1 
+                                                            ; r0 = r0 + r4*2^1
+   29 00000018         
+   30 00000018         ;q3d
+   31 00000018 E1A00704        MOV              r0, r4, LSL #14 
+                                                            ; r0 = r4 * 2^14
+   32 0000001C         
+   33 0000001C         ; q4
+   34 0000001C         ;index MOV r0, #10    ; i counter
+   35 0000001C         ;  MOV r10, #1
+   36 0000001C         ;loop 
+   37 0000001C         ;  ADD r10, r10, #1   ; increase by 1
+   38 0000001C         
+   39 0000001C         
+   40 0000001C         
+   41 0000001C         ;  SUBS r0, r0, #1   ; i++
+   42 0000001C         
+   43 0000001C         ;  BNE loop
+   44 0000001C         
+   45 0000001C EAFFFFFE 
+                       stop    B                stop
+   46 00000020                 END
+Command Line: --debug --xref --apcs=interwork --depend=.\tut5.d -o.\tut5.o -IC:
+\Keil\ARM\RV31\INC -IC:\Keil\ARM\CMSIS\Include -IC:\Keil\ARM\Inc\Philips --pred
+efine="__EVAL SETA 1" --list=.\tut5.lst tut5.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+stop 0000001C
+
+Symbol: stop
+   Definitions
+      At line 45 in file tut5.s
+   Uses
+      At line 45 in file tut5.s
+Comment: stop used once
+tut5 00000000
+
+Symbol: tut5
+   Definitions
+      At line 1 in file tut5.s
+   Uses
+      None
+Comment: tut5 unused
+2 symbols
+333 symbols in table
