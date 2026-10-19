@@ -3,7 +3,10 @@ const form = document.getElementById("form");
 
 form.addEventListener('submit', function(event) {
     event.preventDefault();
-    var valid = false;
+    var name_valid = false;
+    var email_valid = false;
+    var date_valid = false;
+    var exp_valid = false;
     console.log("Button Pressed");
 
     var name = document.getElementById("name");
@@ -34,28 +37,39 @@ form.addEventListener('submit', function(event) {
     // Name validation
     console.log(name.value);
     if (!name.value) { 
-        valid = false;
+        name_valid = false;
         alert("Please fill in your Name.")
     } else if (!namePattern.test(name.value)) { 
-        valid = false;
+        name_valid = false;
         alert("Your Name should only have alphabets.")
-    } else { valid = true; };
+    } else { name_valid = true; };
 
     // Email validation
     console.log(email.value);
     if (!email.value) {
-        valid = false;
+        email_valid = false;
         alert("Your email is required.")
     } else if (!emailPattern.test(email.value)) {
-        valid = false;
+        email_valid = false;
         alert("Enter a valid email.")
-    } else { valid = true; };
+    } else { email_valid = true; };
 
     // Date Validation
     console.log(startDate);
+    if (startDate.value && startDate.value <= today) {
+        date_valid = false;
+        alert("Start date cannot be in the past.")
+    } else { date_valid = true; };
+
+    // Experience Validation
+    console.log(experience.value);
+    if (!experience.value) {
+        exp_valid = false;
+        alert("Please fill in your experience.")
+    } else { exp_valid = true; }
     
 
-    if (valid) {
+    if (name_valid && email_valid && date_valid && exp_valid) {
         form.submit();
     }
 });
