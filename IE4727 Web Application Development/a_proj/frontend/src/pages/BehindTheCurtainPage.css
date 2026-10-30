@@ -1,0 +1,52 @@
+.curtain-page {
+  min-height: 65vh;
+  padding-block: 3rem;
+}
+
+.top-gap {
+  margin-top: 0.5rem;
+}
+
+#donate {
+  scroll-margin-top: 7rem;
+}
+
+.curtain-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  pointer-events: none;
+}
+
+.curtain-panel {
+  width: 50%;
+  height: 100%;
+  background: #5e1020;
+}
+
+.curtain-left {
+  animation: curtain-left-open 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.curtain-right {
+  animation: curtain-right-open 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes curtain-left-open {
+  to {
+    transform: translateX(-102%);
+  }
+}
+
+@keyframes curtain-right-open {
+  to {
+    transform: translateX(102%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain-screen {
+    display: none;
+  }
+}

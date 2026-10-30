@@ -1,0 +1,42 @@
+.visit-page {
+  padding-block: 3rem;
+}
+
+.visit-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 7rem;
+}
+
+.map-card {
+  overflow: hidden;
+  border: 1px solid currentColor;
+  background: #fff;
+}
+
+.theatre-map {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.visit-row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+  margin-top: 0.25rem;
+}
+
+.visit-row p {
+  margin-bottom: 0;
+}
+
+.contact-form {
+  max-width: 760px;
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: inherit;
+  --bs-accordion-btn-focus-box-shadow: none;
+}

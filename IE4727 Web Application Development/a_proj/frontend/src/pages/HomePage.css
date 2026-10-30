@@ -1,0 +1,158 @@
+.banner {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  max-width: none;
+  transform: translateX(-50%);
+}
+
+#showCarousel .carousel-inner {
+  height: 660px;
+  overflow: hidden;
+  background: #000;
+}
+
+#showCarousel,
+#showCarousel .carousel-inner {
+  width: 100%;
+  max-width: 100%;
+}
+
+#showCarousel .carousel-item {
+  position: relative;
+  height: 100%;
+}
+
+.featured-section,
+.feature-section {
+  width: min(100%, 1800px);
+  margin-inline: auto;
+  padding-inline: clamp(0.5rem, 1.2vw, 1.25rem);
+}
+
+.featured-section {
+  padding-block: 2rem 1rem;
+}
+
+.poster-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.2vw, 1.25rem);
+}
+
+.show-card {
+  min-width: 0;
+}
+
+.poster-link {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+  text-align: left;
+  text-decoration: none;
+}
+
+.poster-display {
+  cursor: default;
+}
+
+.poster-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+.show-art {
+  display: grid;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  place-items: center;
+}
+
+.show-art img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.poster-card .show-art {
+  overflow: hidden;
+}
+
+.poster-card .show-art img {
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.2s ease;
+}
+
+.poster-link:hover .show-art img,
+.poster-link:focus-visible .show-art img {
+  filter: brightness(0.6);
+}
+
+.poster-info {
+  min-height: 4rem;
+  padding-block: 0.5rem;
+}
+
+.poster-info h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.feature-section {
+  padding-block: 1rem 2rem;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.feature-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.feature-link img {
+  max-height: 14rem;
+}
+
+.feature-copy {
+  padding-block: 0.5rem;
+}
+
+.feature-copy .btn {
+  display: inline-block;
+}
+
+@media (max-width: 767px) {
+  .poster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  #showCarousel .carousel-inner {
+    height: min(660px, 75vh);
+  }
+
+  .banner {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    max-width: 100%;
+    object-fit: contain;
+    transform: none;
+  }
+
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
