@@ -17,10 +17,8 @@ menu.addEventListener("change", priceChange, false);
 function priceChange(event) {
     var menu = event.target;
     var menuItem = menu.closest(".menu-item");
-    console.log("Something Changed for product", menuItem.dataset.id);
-    var menuName = menuItem.querySelector(".menu-name h3").textContent;
-    var menuQty = menuItem.querySelector(".menuQty").value;
-    var menuShot = menuItem.querySelector("input[name='menuShot']:checked")
+    console.log("Something Changed");
+    var menu = event.target;
     if (menuShot != null) {
         menuShot = menuShot.value;
     }

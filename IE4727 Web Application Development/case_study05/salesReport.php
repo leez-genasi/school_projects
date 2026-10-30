@@ -26,11 +26,8 @@
                 <h2>Sales Report</h2>
                 <?php 
                     $today = date('d-m-Y');
-                    echo "<h3>" .$today ."</h3>";
                 ?>
                 <div class='sales-report'>
-                    <table>
-                        <tr>
                             <td align="right"><b>Total Sales:</b></td>
                             <td>
                                 <?php

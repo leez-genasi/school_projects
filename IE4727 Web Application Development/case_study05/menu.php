@@ -3,10 +3,8 @@
     $menu = $dbcnx->query(
         "SELECT * FROM productprice"
     );
-
     $dbcnx->close();
 ?>
-<!DOCTYPE html>
 <html lang="en">
     <head>
         <link rel="stylesheet" href="stylesheet.css">
