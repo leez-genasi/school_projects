@@ -1,0 +1,77 @@
+.visit-page {
+  /* text-align: center; */
+  justify-content: center;
+  padding-block: 3rem;
+  width: 80%;
+}
+
+.visit-page h1, .eyebrow {
+  text-align: center;
+}
+
+.visit-section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 7rem;
+}
+
+.map-card {
+  overflow: hidden;
+  border: 1px solid currentColor;
+  background: #fff;
+}
+
+.theatre-map {
+  display: block;
+  width: 80%;
+  height: auto;
+}
+
+.visit-row {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+  margin-top: 0.25rem;
+  text-align: left;
+  display: grid;
+  grid-template-areas: "left right";
+  grid-template-columns: 50% 50%;
+}
+
+.left {
+  width: 100%;
+  grid-area: left;
+}
+
+.right {
+  width: 100%;
+  grid-area: right;
+}
+
+.right table {
+  width: 100%;
+}
+
+.right table td:first-child {
+  width: 1fr;
+}
+
+.right table td:last-child {
+  text-align: right;
+}
+
+.visit-row p {
+  margin-bottom: 0;
+}
+
+.contact-form {
+  max-width: 760px;
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.accordion {
+  --bs-accordion-active-bg: transparent;
+  --bs-accordion-active-color: inherit;
+  --bs-accordion-btn-focus-box-shadow: none;
+}

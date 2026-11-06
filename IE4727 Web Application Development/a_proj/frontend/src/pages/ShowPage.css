@@ -1,0 +1,131 @@
+.show-hero {
+  padding: 3rem 1rem;
+  background: rgb(0 0 0 / 78%);
+  color: #fff;
+  text-align: center;
+}
+
+.show-hero h1 {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.8rem, 7vw, 5rem);
+}
+
+.show-hero .lead {
+  font-size: 1.3rem;
+}
+
+.show-hero .button-row {
+  justify-content: center;
+}
+
+.show-production-details,
+.show-performance-details,
+.show-performance-tickets {
+  background: rgb(255 255 255 / 92%);
+}
+
+.show-production-details p,
+.show-performance-details p {
+  margin-bottom: 0.8rem;
+}
+
+.show-details {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 1fr);
+  align-items: start;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.show-performance-details h2,
+.show-performance-tickets h2 {
+  font-family: Georgia, 'Times New Roman', serif;
+}
+
+.ticket-prices-note {
+  margin-bottom: 0.75rem;
+  color: #6c757d;
+}
+
+.ticket-prices {
+  margin: 0;
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(255 255 255 / 92%);
+}
+
+.ticket-price td {
+  padding: 0.65rem 0.6rem;
+  border-top: 1px solid #ddd;
+  vertical-align: top;
+}
+
+.ticket-price td:last-child {
+  text-align: right;
+}
+
+.ticket-price td:last-child strong {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .show-details {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .show-hero h1 {
+    font-size: clamp(2.4rem, 10vw, 3.5rem);
+  }
+
+  .show-details {
+    gap: 1rem;
+  }
+
+  .show-production-details,
+  .show-performance-details,
+  .show-performance-tickets {
+    padding: 1rem;
+  }
+
+  .ticket-price td {
+    padding: 0.5rem 0.35rem;
+  }
+}
+
+.main-container {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 1px minmax(0, 2fr);
+  gap: 2rem;
+  align-items: stretch;
+}
+
+.vert-divider {
+  width: 1px;
+  height: 100%;
+  background: #d9d9d9;
+}
+
+@media (max-width: 767px) {
+  .main-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .vert-divider {
+    width: 100%;
+    height: 1px;
+  }
+}
+
+.hor-divider {
+  width: 1px;
+  background: #d9d9d9;
+  /* margin: 1rem 0; */
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  text-align: left;
+}

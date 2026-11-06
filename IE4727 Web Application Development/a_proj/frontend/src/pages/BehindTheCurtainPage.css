@@ -1,0 +1,141 @@
+.curtain-page {
+  min-height: 65vh;
+  padding-block: 3rem;
+}
+
+.top-gap {
+  margin-top: 0.5rem;
+}
+
+.behind-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.7fr) minmax(0, 2fr);
+  gap: clamp(2rem, 5vw, 5rem);
+}
+
+.behind-index {
+  align-self: start;
+  position: sticky;
+  top: 6rem;
+}
+
+.behind-index ol,
+.role-list,
+.process-list {
+  padding-left: 1.25rem;
+}
+
+.behind-index li,
+.role-list li,
+.process-list li {
+  margin-bottom: 0.55rem;
+}
+
+.behind-index a {
+  text-decoration: none;
+}
+
+.behind-article {
+  min-width: 0;
+}
+
+.behind-heading,
+.behind-section {
+  margin-bottom: 2.5rem;
+  scroll-margin-top: 7rem;
+}
+
+.fiction-note,
+.crew-role {
+  color: #6c757d;
+}
+
+.crew-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 1rem;
+}
+
+.crew-card {
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.crew-card > img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.crew-copy {
+  padding: 1rem;
+}
+
+.crew-copy h3,
+.crew-copy p {
+  margin-bottom: 0.4rem;
+}
+
+.crew-copy blockquote {
+  margin: 0.75rem 0 0;
+}
+
+.support-section {
+  padding: 1.5rem;
+  border: 1px solid currentColor;
+}
+
+#donate {
+  scroll-margin-top: 7rem;
+}
+
+.curtain-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 1100;
+  display: flex;
+  pointer-events: none;
+}
+
+.curtain-panel {
+  width: 50%;
+  height: 100%;
+  background: #5e1020;
+}
+
+.curtain-left {
+  animation: curtain-left-open 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+.curtain-right {
+  animation: curtain-right-open 1.2s cubic-bezier(0.65, 0, 0.35, 1) forwards;
+}
+
+@keyframes curtain-left-open {
+  to {
+    transform: translateX(-102%);
+  }
+}
+
+@keyframes curtain-right-open {
+  to {
+    transform: translateX(102%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .curtain-screen {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .behind-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .behind-index {
+    position: static;
+  }
+}
