@@ -1,0 +1,13 @@
+{
+  "name": "theatre-site",
+  "version": "1.0.0",
+  "description": "Theatre website using Express and MySQL",
+  "main": "js/server.js",
+  "scripts": {
+    "start": "node js/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.15.0"
+  }
+}

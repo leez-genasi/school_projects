@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Theatre | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <nav class="navbar site-nav">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand brand" href="index.html">theatre</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse nav-menu" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="calendar.html">Upcoming Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visit.html#getting-here">Getting Here</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visit.html#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="behind-the-curtain.html">Behind the Curtain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <section class="container-fluid px-0">
+        <div id="showCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#showCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#showCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#showCarousel" data-bs-slide-to="2"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="banner" src="../images/banners/hamilton.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="banner" src="../images/banners/hadestown.jpg">
+            </div>
+            <div class="carousel-item">
+              <img class="banner" src="../images/banners/greatest-showman.jpg">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#showCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#showCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </section>
+      <section class="container featured-section">
+        <h2 class="text-center mb-3">Featured Shows</h2>
+        <div class="poster-grid" id="showPosterGrid"></div>
+        <div class="text-center mt-2">
+          <a class="btn outline" href="calendar.html">See More</a>
+        </div>
+      </section>
+      <section class="feature-section">
+        <div class="feature-grid">
+          <div class="text-center">
+            <a class="feature-link" href="behind-the-curtain.html">
+              <h2>About Theatre</h2>
+              <img src="../images/theatre.svg">
+              <div class="feature-copy">
+                <p>Meet the artists, makers and stage crew who bring each live performance to life.</p>
+                <span class="btn outline">See More</span>
+              </div>
+            </a>
+          </div>
+          <div class="text-center">
+            <a class="feature-link" href="behind-the-curtain.html#donate">
+              <h2>Become a Donor</h2>
+              <img src="../images/donor.svg">
+              <div class="feature-copy">
+                <p>Your gift supports new work, emerging artists and a more welcoming theatre for everyone.</p>
+                <span class="btn outline">See More</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+    <div class="modal fade" id="showModal" tabindex="-1">
+      <div class="modal-dialog show-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <div class="show-heading text-center">
+            <p class="eyebrow mb-1" id="modalGenre"></p>
+            <h2 id="modalTitle" class="modal-title"></h2>
+          </div>
+          <div class="show-body">
+            <div class="overview-grid">
+              <aside class="facts">
+                <p class="eyebrow">The production</p>
+                <p><strong>Genre</strong><br><span id="modalFactGenre"></span></p>
+                <p><strong>Run time</strong><br><span id="modalRuntime"></span></p>
+                <p><strong>Season</strong><br><span id="modalDates"></span></p>
+                <p><strong>Venue</strong><br><span id="modalVenue"></span></p>
+              </aside>
+              <section class="story">
+                <blockquote id="modalTagline"></blockquote>
+                <p id="modalDescription"></p>
+                <a class="btn outline" id="modalBookNow" href="calendar.html">Book now</a>
+              </section>
+            </div>
+            <div class="booking-grid">
+              <section>
+                <p class="eyebrow">Plan your visit</p>
+                <h3>Performance details</h3>
+                <p><strong>Showtimes</strong><br><span id="modalShowtimes"></span></p>
+                <p><strong>Venue</strong><br><span>Sands Theatre, Singapore</span></p>
+                <p class="mb-0"><strong>Terms and conditions</strong><br>Tickets are subject to availability. Please arrive 30 minutes before the performance.</p>
+              </section>
+              <section class="prices">
+                <p class="eyebrow">Make it a night out</p>
+                <h3>Ticket information</h3>
+                <p>Choose a performance date to see available seats and current ticket prices.</p>
+                <ul>
+                  <li>Standard and concession seats</li>
+                  <li>Accessible seating available</li>
+                  <li>Final prices are shown at checkout</li>
+                </ul>
+                <a id="modalCalendar" href="calendar.html">Browse show dates</a>
+              </section>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">Close</button>
+            <button class="btn btn-outline-dark" id="moreShowDetails" type="button" disabled>More details</button>
+            <a class="btn btn-outline-dark" id="modalCalendarFooter" href="calendar.html">View calendar</a>
+            <a class="btn btn-black" id="modalCheckout" href="cart.html">Choose tickets</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="fullDetailsModal" tabindex="-1">
+      <div class="modal-dialog details-dialog">
+        <div class="modal-content details-content">
+          <div class="details-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          </div>
+          <header class="details-title">
+            <h2 id="detailsTitle">Show details</h2>
+            <p id="detailsGenre"></p>
+          </header>
+          <div class="details-body">
+            <div class="details-top">
+              <aside class="details-facts">
+                <p class="detail-label">Production details</p>
+                <p><strong>Genre</strong><span id="detailsFactGenre"></span></p>
+                <p><strong>Season</strong><span id="detailsDates"></span></p>
+                <p><strong>Venue</strong><span id="detailsVenue"></span></p>
+              </aside>
+              <section class="details-story">
+                <blockquote id="detailsTagline"></blockquote>
+                <p id="detailsDescription"></p>
+                <a class="details-book" id="detailsBook" href="calendar.html">Book now</a>
+              </section>
+            </div>
+            <div class="details-bottom">
+              <section class="details-performance">
+                <p class="detail-label">Performance details</p>
+                <p><strong>Runtime</strong><span id="detailsRuntime"></span></p>
+                <p><strong>Showtimes</strong><span id="detailsTimes"></span></p>
+                <p><strong>Venue</strong><span id="detailsVenueFull"></span></p>
+                <p><strong>Terms and conditions</strong><span>Tickets are subject to availability. Please arrive 30 minutes before the performance.</span></p>
+              </section>
+              <section class="details-prices">
+                <p class="detail-label">Ticket pricing</p>
+                <h3>Choose your seats</h3>
+                <ul id="detailsPrices"></ul>
+                <a id="detailsCalendar" href="calendar.html">Browse show dates</a>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container footer-row">
+        <span>theatre</span>
+        <span>Stories are better shared live.</span>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

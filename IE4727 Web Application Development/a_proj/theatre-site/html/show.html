@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Show Details | Theatre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <nav class="navbar site-nav">
+      <div class="container-fluid px-4">
+        <a class="navbar-brand brand" href="index.html">theatre</a>
+        <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+        <div class="collapse nav-menu" id="nav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="calendar.html">Upcoming Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visit.html#getting-here">Getting Here</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="visit.html#contact">Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="behind-the-curtain.html">Behind the Curtain</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html">Cart</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <header class="show-hero text-center">
+      <div class="container py-5">
+        <p class="eyebrow" id="showGenre">Live performance</p>
+        <h1 id="showTitle">Show</h1>
+        <p class="lead" id="showTagline"></p>
+        <div class="button-row">
+          <a class="btn btn-light" id="showCalendar" href="calendar.html">View calendar</a>
+          <a class="btn btn-outline-light" id="showCheckout" href="cart.html">Choose tickets</a>
+        </div>
+      </div>
+    </header>
+    <main class="container py-5">
+      <div class="row g-4">
+        <section class="col-md-8">
+          <p class="eyebrow">About the show</p>
+          <h2>A story for the stage</h2>
+          <p class="lead" id="showDescription"></p>
+          <p id="showRuntime"></p>
+        </section>
+        <aside class="col-md-4">
+          <div class="p-4 h-100">
+            <h2 class="h5">Performance details</h2>
+            <p><strong>Dates</strong><br><span id="showDates"></span></p>
+            <p class="mb-0"><strong>Venue</strong><br>Sands Theatre<br>Singapore</p>
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="container footer-row">
+        <span>theatre</span>
+        <a href="calendar.html">Choose a date</a>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>
